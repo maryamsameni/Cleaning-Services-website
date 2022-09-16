@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+*,
+::after,
+:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main,
+header,
+section,
+aside,
+article,
+footer,
+figure,
+nav,
+ul,
+li,
+div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 7%;
+}
+header > .text {
+  width: 20%;
+  align-content: center;
+}
+header > .text > span {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+header > nav {
+  width: 80%;
+  height: 100%;
+}
+header > nav > ul {
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-content: center;
+}
+header > nav > ul > li {
+  padding: 0 20px;
+  text-transform: capitalize;
+  font-size: 14px;
+  transition: 1s;
+}
+header > nav > ul > li:hover {
+  color: blue;
+}
+
+.topSite {
+  margin-top: 70px;
+  width: 100%;
+  height: 80vh;
+  padding: 0 7%;
+}
+.topSite > .topSiteLeft {
+  width: 50%;
+  height: 50%;
+  margin-top: 10%;
+}
+.topSite > .topSiteLeft > h1 {
+  font-size: 50px;
+}
+.topSite > .topSiteLeft > p {
+  font-size: 10px;
+}
+.topSite > .topSiteLeft > span {
+  background-color: blue;
+  color: white;
+  border-radius: 25px;
+  font-size: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+  transition: 1s;
+}
+.topSite > .topSiteLeft > span:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 255, 0.555);
+}
+.topSite > .topSiteRight {
+  width: 50%;
+  height: 100%;
+}
+.topSite > .topSiteRight > figure {
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  position: relative;
+}
+.topSite > .topSiteRight > figure > img {
+  height: 100%;
+  display: flex;
+  z-index: 999;
+}
+.topSite > .topSiteRight > figure::before {
+  content: "";
+  display: flex;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: blue;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  padding: 20px 7%;
+  align-content: center;
+}
+.about > .picAbout {
+  width: 50%;
+  height: 70%;
+}
+.about > .picAbout > figure {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.about > .picAbout > figure > img {
+  height: 80%;
+  z-index: 1;
+}
+.about > .picAbout > figure::after {
+  content: "";
+  background-color: #2b2a2a;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 52%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.about > .picAbout > figure > div {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  top: 52%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border-radius: 0 25px 0 25px;
+  z-index: 88;
+  align-content: center;
+}
+.about > .picAbout > figure > div > h3,
+.about > .picAbout > figure > div span {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+}
+.about > .picAbout > figure > div > span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.about > .textAbout {
+  width: 50%;
+  height: 70%;
+  align-content: center;
+}
+.about > .textAbout > span {
+  width: 100%;
+  margin-left: 52px;
+  position: relative;
+}
+.about > .textAbout > span::before {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 40px;
+  height: 1px;
+  position: absolute;
+  left: -48px;
+  top: 12px;
+}
+.about > .textAbout > span::after {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 40px;
+  height: 1px;
+  position: absolute;
+  left: 77px;
+  top: 12px;
+}
+.about > .textAbout > h1 {
+  font-size: 30px;
+}
+.about > .textAbout > p {
+  font-size: 12px;
+}
+.about > .textAbout > p:nth-of-type(1) {
+  margin: 10px auto;
+}
+
+.services {
+  width: 100%;
+  padding: 0 7%;
+  align-content: center;
+  justify-content: center;
+}
+.services > span {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  text-transform: capitalize;
+}
+.services > span::before {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 30px;
+  height: 0.5px;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.services > span::after {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 30px;
+  height: 0.5px;
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.services > h2 {
+  font-size: 40px;
+}
+
+.servicesPic {
+  width: 100%;
+  padding: 30px 7% 80px 7%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 20px 0 80px 0;
+}
+.servicesPic > figure {
+  width: 13%;
+  height: 140px;
+  border: 3px solid rgba(255, 255, 255, 0.822);
+  border-radius: 50%;
+  justify-content: center;
+}
+.servicesPic > figure > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.servicesPic > figure > figcaption {
+  margin-top: 20px;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.pricing {
+  width: 100%;
+  padding: 0 7%;
+  align-content: center;
+  justify-content: center;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.pricing > span {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.pricing > span::before {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 30px;
+  height: 0.5px;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.pricing > span::after {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 30px;
+  height: 0.5px;
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.pricing > h2 {
+  font-size: 35px;
+}
+
+.boxPricing {
+  width: 100%;
+  padding: 20px 7% 40px 7%;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.boxPricing > .box {
+  width: 29%;
+  justify-content: center;
+  align-content: center;
+  background-color: #2b2a2a;
+  padding: 20px;
+  border-radius: 12px;
+}
+.boxPricing > .box > h3 {
+  text-align: center;
+  font-size: 25px;
+}
+.boxPricing > .box > * {
+  width: 100%;
+  text-transform: capitalize;
+}
+.boxPricing > .box > .dollar {
+  width: 110px;
+  height: 110px;
+  border: 5px solid rgba(0, 0, 0, 0.418);
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0;
+}
+.boxPricing > .box > .dollar > h2 {
+  color: blue;
+}
+.boxPricing > .box > .dollar > span {
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+}
+.boxPricing > .box .next {
+  width: 100%;
+  align-content: left;
+}
+.boxPricing > .box .next > p {
+  width: 90%;
+  font-size: 13px;
+  margin: 8px 0;
+}
+.boxPricing > .box .next > i {
+  width: 10%;
+}
+.boxPricing > .box > span {
+  border-radius: 25px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: blue;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 2s;
+}
+.boxPricing > .box > span:hover {
+  background-color: rgba(0, 0, 255, 0.555);
+  transform: rotateY(360deg);
+}
+
+.team {
+  width: 100%;
+  padding: 0 7%;
+  margin-bottom: 40px;
+  align-content: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+.team > span {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.team > span::before {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 30px;
+  height: 0.5px;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.team > span::after {
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 30px;
+  height: 0.5px;
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.team > h2 {
+  font-size: 40px;
+}
+
+.picTeam {
+  width: 100%;
+  padding: 0 7%;
+  margin-bottom: 90px;
+  justify-content: space-between;
+}
+.picTeam > figure {
+  width: 25%;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  align-content: flex-end;
+}
+.picTeam > figure > img {
+  width: 90%;
+  height: 94%;
+  border-radius: 50%;
+  z-index: 1;
+}
+.picTeam > figure::before {
+  content: "";
+  background-color: #2b2a2a;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.picTeam > figure > div {
+  width: 60%;
+  height: 60px;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0 25px 0 25px;
+  background-color: blue;
+  z-index: 2;
+  justify-content: center;
+  align-content: center;
+}
+.picTeam > figure > div > * {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+.picTeam > figure > div > span {
+  font-size: 9px;
+}
+.picTeam > figure > div > strong {
+  font-size: 13px;
+}
+
+footer {
+  width: 100%;
+  height: 75vh;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+footer > .left {
+  width: 40%;
+  height: 70%;
+}
+footer > .left > .icone {
+  width: 15%;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer > .left > .icone > i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 9px;
+  color: black;
+}
+footer > .left > .text {
+  width: 85%;
+  text-transform: capitalize;
+}
+footer > .left > .text > span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+footer > .left > .text > * {
+  width: 100%;
+}
+footer > .left > .text > .line {
+  width: 100%;
+  height: 2px;
+  background-color: #2b2a2a;
+  margin: 10px 0 20px 0;
+}
+footer > .right {
+  width: 58%;
+  right: 100%;
+}
+footer > .right > form > input {
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+  height: 50px;
+  border-radius: 20px;
+  margin: 10px 0;
+  border: 1px solid #2b2a2a;
+  padding: 2px 20px;
+}
+footer > .right > form > input::-moz-placeholder {
+  color: white;
+}
+footer > .right > form > input:-ms-input-placeholder {
+  color: white;
+}
+footer > .right > form > input::placeholder {
+  color: white;
+}
+footer > .right > form > textarea {
+  width: 100%;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+footer > .right > form > textarea::-moz-placeholder {
+  color: white;
+}
+footer > .right > form > textarea:-ms-input-placeholder {
+  color: white;
+}
+footer > .right > form > textarea::placeholder {
+  color: white;
+}
+footer > .right > form > button {
+  padding: 10px 20px;
+  background: blue;
+  outline: 0;
+  border: 0;
+  border-radius: 25px;
+  color: white;
+  margin-top: 20px;
+  transition: 1s;
+  cursor: pointer;
+}
+footer > .right > form > button:hover {
+  transform: scale(1.2);
+}
+
+.end {
+  width: 100%;
+  background-color: blue;
+  padding: 70px 7%;
+  justify-content: center;
+}
+.end > h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.end > .icone {
+  justify-content: space-between;
+}
+.end > .icone > i {
+  margin: 0 10px;
+  background-color: white;
+  color: blue;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}/*# sourceMappingURL=master.css.map */
